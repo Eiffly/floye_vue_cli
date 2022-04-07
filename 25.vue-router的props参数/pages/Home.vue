@@ -15,14 +15,12 @@
             > -->
             <router-link
               active-class="active"
-              replace
               to="/home/news"
               class="list-group-item"
               >News</router-link
             >
             <router-link
               active-class="active"
-              replace
               to="/home/message"
               class="list-group-item"
               >Message</router-link
