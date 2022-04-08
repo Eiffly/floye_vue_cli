@@ -33,9 +33,7 @@
           <div class="panel">
             <div class="panel-body">
               <div>
-                <keep-alive include="News">
-                  <router-view></router-view>
-                </keep-alive>
+                <router-view></router-view>
               </div>
             </div>
           </div>
