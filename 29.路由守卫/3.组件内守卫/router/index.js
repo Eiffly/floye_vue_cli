@@ -6,7 +6,6 @@ import Message from "../pages/Message"
 import Details from "../pages/Details"
 
 const router = new VueRouter({
-	mode: "history",
 	routes: [
 		{
 			path: "/about",

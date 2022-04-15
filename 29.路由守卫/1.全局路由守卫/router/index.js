@@ -6,7 +6,6 @@ import Message from "../pages/Message"
 import Details from "../pages/Details"
 
 const router = new VueRouter({
-	mode: "history",
 	routes: [
 		{
 			path: "/about",
@@ -41,19 +40,6 @@ const router = new VueRouter({
 							meta: {
 								isAuth: true, name: "详细"
 							},
-							beforeEnter(to, from, next) {
-								console.log(to, from, this);
-								// 路由元数据，要求进行检验
-								if (to.meta.isAuth) {
-									if (localStorage.getItem("name") === "floyee") {
-										next()
-									} else {
-										alert("你配吗？")
-									}
-								} else {
-									next()
-								}
-							},
 							props($route) {
 								return {
 									id: $route.params.id,
@@ -69,7 +55,7 @@ const router = new VueRouter({
 })
 
 
-/* router.beforeEach((to, from, next) => {
+router.beforeEach((to, from, next) => {
 	console.log(to, from, this);
 	// 路由元数据，要求进行检验
 	if (to.meta.isAuth) {
@@ -82,7 +68,7 @@ const router = new VueRouter({
 		next()
 	}
 
-}) */
+})
 
 
 router.afterEach((to, from) => {
